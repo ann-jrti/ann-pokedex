@@ -6,6 +6,7 @@ import PokeHeader from "../poke-header";
 function PokeList() {
   const [pokemons, updatePokemons] = useState([]);
   const [filteredPokemons, udpateFilteredPokemons] = useState([]);
+  let [urlApi, updateUrlApi] = useState('https://pokeapi.co/api/v2/pokemon')
 
   const filter = e => {
     console.log(e);
@@ -14,7 +15,7 @@ function PokeList() {
   }
 
   useEffect(() => {
-      getPokemonsFromApi()
+      getPokemonsFromApi(urlApi)
       .then(d => 
         {d.results.map((o) => {
           fetch(o.url)
@@ -30,7 +31,7 @@ function PokeList() {
 
     const printPokemonCard = filteredPokemons.map(pokemon => {
         return <PokeCard
-          img={pokemon.sprites.other.home.front_default}
+          img={pokemon.sprites.other['official-artwork'].front_default}
           name={pokemon.name}
           types={pokemon.types[0].type.name}
           id={pokemon.id}

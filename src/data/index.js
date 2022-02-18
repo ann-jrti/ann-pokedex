@@ -1,5 +1,8 @@
-export const getPokemonsFromApi = async () => {
-    const response = await fetch('https://pokeapi.co/api/v2/pokemon');
+
+
+export const getPokemonsFromApi = async (url) => {
+    const response = await fetch(url);
     const data = await response.json();
+    console.log(data);
     return data
 }
