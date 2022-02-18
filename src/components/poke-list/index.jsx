@@ -23,7 +23,7 @@ function PokeList() {
 
     const printPokemonCard = pokemons.map(pokemon => {
         return <PokeCard
-          img={pokemon.sprites.front_default}
+          img={pokemon.sprites.other.home.front_default}
           name={pokemon.name}
           types={pokemon.types[0].type.name}
           id={pokemon.id}

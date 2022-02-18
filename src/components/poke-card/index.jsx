@@ -6,7 +6,10 @@ function PokeCard({img, name, types, id}) {
     return (
         <article className="pokemon">
             <div className="pokemon__image-container">
-                <img className="pokemon__image" src={img}></img>
+                <div className="pokemon__sprite-container">
+                    <div className="pokemon__shape"></div>
+                    <img className="pokemon__image" src={img}></img>
+                </div>
             </div>
            
             <section className="pokemon__info-container">
