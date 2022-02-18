@@ -15,7 +15,7 @@ function PokeCard({img, name, types, id}) {
             <section className="pokemon__info-container">
                 <h2 className="pokemon__name">{name}</h2>
                 <div className="pokemon__types-container">
-                    <p className="pokemon__types">Types:</p>
+                    <p className="pokemon__types">types</p>
                     <p className="pokemon__types-value">{types}</p>
                 </div>
                 
