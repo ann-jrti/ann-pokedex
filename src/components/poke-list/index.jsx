@@ -1,12 +1,20 @@
 import React, { useState, useEffect } from "react";
 import PokeCard from "../poke-card";
+import { getPokemonsFromApi } from "../../data";
+import PokeHeader from "../poke-header";
 
 function PokeList() {
-  let [pokemons, updatePokemons] = useState([]);
+  const [pokemons, updatePokemons] = useState([]);
+  const [filteredPokemons, udpateFilteredPokemons] = useState([]);
+
+  const filter = e => {
+    console.log(e);
+    const newFilter = pokemons.filter(p => p.name.toLowerCase().includes(e.target.value.toLowerCase()));
+    udpateFilteredPokemons(newFilter)
+  }
 
   useEffect(() => {
-    fetch("https://pokeapi.co/api/v2/pokemon")
-      .then(res => res.json())
+      getPokemonsFromApi()
       .then(d => 
         {d.results.map((o) => {
           fetch(o.url)
@@ -14,14 +22,13 @@ function PokeList() {
           .then(p => {
               pokemons.push(p);
               updatePokemons([...pokemons]);
+              udpateFilteredPokemons([...pokemons])
             })
         })
       })
   }, []);
 
-  console.log(pokemons);
-
-    const printPokemonCard = pokemons.map(pokemon => {
+    const printPokemonCard = filteredPokemons.map(pokemon => {
         return <PokeCard
           img={pokemon.sprites.other.home.front_default}
           name={pokemon.name}
@@ -32,9 +39,11 @@ function PokeList() {
 
   return (
     <React.Fragment>
+      <PokeHeader filterByPokemon={filter}></PokeHeader>
       {pokemons.length === 0 ? <h2>Cargando...</h2> : printPokemonCard}
     </React.Fragment>
   );
 }
+
 
 export default PokeList;

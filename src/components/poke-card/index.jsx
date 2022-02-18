@@ -1,6 +1,6 @@
 import './style.css'
 
-function PokeCard({img, name, types, id}) {
+function PokeCard({img, name, types, id, key}) {
 
 
     return (
