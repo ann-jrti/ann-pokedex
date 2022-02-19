@@ -1,17 +1,18 @@
 import './App.css';
-import PokeList from './components/poke-list';
-import PokeHeader from './components/poke-header';
-import { getPokemonsFromApi } from './data/index';
-import React, { useEffect, useState } from 'react';
+import { Router, BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/home';
+
 
 function App() {
 
   return (
+
     <div className="App">
-      <main className="pokemon__cards">
-        <PokeList></PokeList>
-      </main>
-    
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home></Home>} ></Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
