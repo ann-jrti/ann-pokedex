@@ -10,7 +10,7 @@ function App() {
 
   return (
 
-    <div className="App">
+    
       <BrowserRouter>
         {/* <PokeHeader></PokeHeader> */}
         <Routes>
@@ -19,7 +19,7 @@ function App() {
           <Route path='/home/:id' element={<PokemonDetails></PokemonDetails>}></Route>
         </Routes>
       </BrowserRouter>
-    </div>
+  
   );
 }
 
