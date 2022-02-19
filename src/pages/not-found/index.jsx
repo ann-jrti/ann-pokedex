@@ -12,7 +12,7 @@ function NotFound() {
                         Oh! This is not the page you were looking for
                     </h1>
                     <img className="not-found-img" src={notFoundImg}></img>
-                    <Link to="/"><h2 className="back-home">Take me back home</h2></Link>
+                    <Link to="/home"><h2 className="back-home">Take me back home</h2></Link>
                 </div>
             </main>
         </React.Fragment>

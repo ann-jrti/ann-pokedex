@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import PokeCard from "../poke-card";
 import { getPokemonsFromApi } from "../../data";
 import PokeHeader from "../poke-header";
+import { Link } from "react-router-dom";
 
 function PokeList() {
   const [pokemons, updatePokemons] = useState([]);
@@ -9,7 +10,6 @@ function PokeList() {
   let [urlApi, updateUrlApi] = useState('https://pokeapi.co/api/v2/pokemon')
 
   const filter = e => {
-    console.log(e);
     const newFilter = pokemons.filter(p => p.name.toLowerCase().includes(e.target.value.toLowerCase()));
     udpateFilteredPokemons(newFilter)
   }
@@ -31,10 +31,12 @@ function PokeList() {
 
   const printPokemonCard = filteredPokemons.map(pokemon => {
     return <PokeCard
+      key={pokemon.id}
       img={pokemon.sprites.other['official-artwork'].front_default}
       name={pokemon.name}
       types={pokemon.types[0].type.name}
       id={pokemon.id}
+      detailsId={pokemon.id}
     ></PokeCard>
   })
 
