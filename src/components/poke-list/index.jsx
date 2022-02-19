@@ -15,12 +15,12 @@ function PokeList() {
   }
 
   useEffect(() => {
-      getPokemonsFromApi(urlApi)
-      .then(d => 
-        {d.results.map((o) => {
+    getPokemonsFromApi(urlApi)
+      .then(d => {
+        d.results.map((o) => {
           fetch(o.url)
-          .then(res => res.json())
-          .then(p => {
+            .then(res => res.json())
+            .then(p => {
               pokemons.push(p);
               updatePokemons([...pokemons]);
               udpateFilteredPokemons([...pokemons])
@@ -29,14 +29,14 @@ function PokeList() {
       })
   }, []);
 
-    const printPokemonCard = filteredPokemons.map(pokemon => {
-        return <PokeCard
-          img={pokemon.sprites.other['official-artwork'].front_default}
-          name={pokemon.name}
-          types={pokemon.types[0].type.name}
-          id={pokemon.id}
-        ></PokeCard>
-    })
+  const printPokemonCard = filteredPokemons.map(pokemon => {
+    return <PokeCard
+      img={pokemon.sprites.other['official-artwork'].front_default}
+      name={pokemon.name}
+      types={pokemon.types[0].type.name}
+      id={pokemon.id}
+    ></PokeCard>
+  })
 
   return (
     <React.Fragment>
