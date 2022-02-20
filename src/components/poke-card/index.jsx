@@ -1,7 +1,7 @@
 import './style.css'
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 
-function PokeCard({img, name, types, id, detailsId}) {
+function PokeCard({img, name, types, id, detailsId, onClickUpdate}) {
 
 
     return (
@@ -24,7 +24,7 @@ function PokeCard({img, name, types, id, detailsId}) {
                     <div className="pokemon__id-shape"></div>
                     <p className="pokemon__id-value">nº<span>{id}</span></p>
                 </div>  
-                <Link to={`/home/${detailsId}`}><div className="pokemon__details">See more details</div></Link>
+                <Link to={`/home/pokemon/${detailsId}`}><div className="pokemon__details" onClick={onClickUpdate}>See more details</div></Link>
             </section>
         </article>
     )

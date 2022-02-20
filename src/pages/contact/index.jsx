@@ -1,0 +1,53 @@
+import './style.css'
+import React, { useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
+
+function Contact() {
+    const formSubmitApi = 'https://formsubmit.co/ajax/andreamaso.sm@gmail.com';
+    const backHome = useNavigate();
+    const [response, updateResponse] = useState("")
+    const location= useLocation();
+    const poke = new URLSearchParams(useLocation().search);
+    const name = poke.get("name")
+    console.log(name);
+
+
+    return(
+        <main>
+        <form onSubmit={(e) => {
+            e.preventDefault()
+            fetch(formSubmitApi, {
+              method: "POST",
+              body: new FormData(e.target)})
+              .then(response => response.json())
+              .then(info => {
+                updateResponse("Thank you for your register!")
+                  setTimeout(()=>{
+                    backHome('/home') 
+                  }, 3000)
+                })
+            }}>
+
+            <h2 className='form__register-title'>Register here</h2>
+            <div className="form__input-container">
+              <label className="form__label" htmlFor="name">Name</label>
+              <input className="form__input" name="name" type="text" placeholder="Your name" required></input>
+            </div>
+            
+            <div className="form__input-container">
+              <label className="form__label" htmlFor="email">Email</label>
+              <input className="form__input" name="email" type="email" placeholder="Your Email" required></input>
+            </div>
+            
+            
+            {/* <textarea placeholder="Your Message" name="message" rows="5" required></textarea> */}
+
+            <button className="submit" type="submit">Submit</button>
+        </form>
+        <h2>{response}</h2>
+        </main>
+       
+    )
+}
+
+export default Contact;

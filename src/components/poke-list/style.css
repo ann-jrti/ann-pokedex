@@ -2,13 +2,13 @@
     display: flex;
     justify-content: column;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .next-page-button-container {
     min-width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 1rem;
 }
 
 .next-page-button {
@@ -30,3 +30,33 @@
     color: white;
     padding: .3rem;
 }
+
+/* input */
+
+.input-search-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end; 
+    width: 100%;
+    margin: 2rem 5rem;
+  }
+
+.input-search {
+    padding-left: 20px;
+    border-radius: 0.2rem;
+    width: 11rem;
+    height: 30px;
+    border: none;
+    background-color: white;
+    position: absolute;
+    border: 1px solid rgb(212, 54, 54);
+  }
+  
+ 
+  
+  .search-icon {
+    opacity: 0.8;
+    width: 18px;
+    margin-right: .7rem;
+    margin-bottom: .4rem;
+  }

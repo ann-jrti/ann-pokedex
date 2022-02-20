@@ -1,5 +1,7 @@
 import "./style.css";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import PokeHeader from "../../../../components/poke-header";
 
 function PokemonDetail({
   name,
@@ -16,6 +18,7 @@ function PokemonDetail({
   const [detailImage, setDetailImage] = useState(null);
   console.log(detailImage);
   return (
+    <React.Fragment>
     <main className="pokemon__detail-container">
       <h1 className="pokemon__details-text">Pokemon details</h1>
       <article className="pokemon__detail">
@@ -30,7 +33,9 @@ function PokemonDetail({
             src={detailImage ? detailImage : img}
             className="imagen bounce pokemon__detail__image"
           ></img>
-          <button
+         
+        </div>
+        <button
             className="pokemon__version"
             onClick={() => {
               setDetailImage(detailImage ? null : imgReverse);
@@ -38,8 +43,6 @@ function PokemonDetail({
           >
             {detailImage ? "normal version" : "shinny version"}
           </button>
-        </div>
-
         <h2 className="pokemon__detail__name">{name}</h2>
         <section className="pokemon__stats-container">
           <div className="pokemon__stats-text-container">
@@ -68,8 +71,14 @@ function PokemonDetail({
           </div>
           {/* <p className="">Height | <span>{height} cm</span></p>  */}
         </section>
+        <Link to="/home">
+        <button className="pokemon__details-back-home"><span className="arrow">←</span> Back to pokemon list</button>
+        </Link> 
       </article>
     </main>
+   
+    </React.Fragment>
+
   );
 }
 

@@ -1,0 +1,46 @@
+body {
+    width: 100vh;
+}
+
+form {
+    width: 100vh;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 3rem;
+    gap: 1rem;
+}
+
+.form__register-title {
+    font-size: 2rem;
+}
+
+.form__input-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.form__input {
+    border: none;
+    border-radius: 2px;
+    padding-left: .5rem;
+}
+
+.form__label {
+    font-size: .8rem;
+    font-weight: 500;
+    padding-bottom: .2rem;
+}
+
+.submit {
+    border: none;
+    border-radius: .2rem;
+    background-color: white;
+    padding: .3rem .6rem;
+}
+
+.submit:hover {
+    cursor: pointer;
+}

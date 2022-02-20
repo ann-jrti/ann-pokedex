@@ -11,11 +11,17 @@ import PokemonDetail from './components/detail-info';
 function PokemonDetails() {
     const pathParams= useParams();
     const [pokemons, updatePokemons] = useState([]);
-    let [urlApi, updateUrlApi] = useState(`https://pokeapi.co/api/v2/pokemon/${pathParams.id}`)
+    const [nextPokemons, updateNextPokemons] = useState(`https://pokeapi.co/api/v2/pokemon?offset=$20&limit=20`);
+    const [prevPokemons, updatePrevPokemons] = useState(`https://pokeapi.co/api/v2/pokemon?offset=$&limit=20`);
+    let [urlApi, updateUrlApi] = useState(`https://pokeapi.co/api/v2/pokemon`)
+
+
 
     useEffect(() => {
-    getPokemonsFromApi('https://pokeapi.co/api/v2/pokemon')
+    getPokemonsFromApi(urlApi)
       .then(d => {
+        updateNextPokemons(d.next);
+        updatePrevPokemons(d.previous === null ? '' : d.previous);
         d.results.map((o) => {
           fetch(o.url)
             .then(res => res.json())
@@ -25,10 +31,10 @@ function PokemonDetails() {
             })
         })
       })
-  }, []);
+  }, [urlApi]);
   
   const findPokemonById = pokemons.find(pokemon => pokemon.id === parseInt(pathParams.id))
-  
+
   const printPokemonDetail = (pokemon) => {
     return <PokemonDetail
           img={pokemon.sprites.other.home.front_default}

@@ -1,8 +1,8 @@
 body {
-    margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 /* .pokemon__detail-container {
@@ -14,6 +14,7 @@ body {
     font-size: 1.5rem;
     font-style: italic;
     font-weight: 400;
+    margin-bottom: 3rem;
 }
 
 .pokemon__detail {
@@ -22,8 +23,7 @@ body {
     justify-content: center;
     align-items: center; 
     border-radius: .3rem;
-    width: 20rem;
-    height: 35rem;
+    margin-top: 3rem;
     /* background-color: rgb(230, 230, 230); */
 }
 
@@ -32,7 +32,6 @@ body {
     font-weight: 600;
     padding: 1rem;
     font-size: 3rem;
-    margin-top: 2rem;
 }
 
 /* pokemon splash */
@@ -55,6 +54,7 @@ body {
     position: absolute;
     margin-bottom: 20rem;
   }
+  
   .pokemon__pokeball-background {
       opacity: 0.15;
       width: 400px;
@@ -76,6 +76,7 @@ body {
     position: relative;
     width: 150px;
     padding-bottom: 1rem;
+    margin-top: 2rem;
 }
 
 /* bounce pokemon image effect */
@@ -111,6 +112,7 @@ body {
     background-color: rgb(253, 224, 93);
     font-weight: 600;
     border: 1px solid rgb(238, 199, 28);
+    margin-top: 2rem;
 }
 
 .pokemon__version:hover {
@@ -158,4 +160,30 @@ p {
 span {
     font-weight: lighter;
     margin-left: 5px;
+}
+
+/* back home button */
+
+.pokemon__details-back-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: .5rem;
+    width: 100%;
+    border: none;
+    border-radius: .2rem;
+    margin-top: 1rem;
+    font-weight: 700;
+    gap: .3rem;
+    color: rgb(212, 54, 54);;
+}
+
+.pokemon__details-back-home:hover {
+    cursor: pointer;
+}
+
+.arrow {
+    font-size: 1.5rem;
+    padding-bottom: .3rem;
 }

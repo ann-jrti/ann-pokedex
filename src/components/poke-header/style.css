@@ -1,3 +1,7 @@
+nav {
+  width: 100%;
+}
+
 .pokemon__header {
     background-color: rgb(212, 54, 54);
     height: 4rem;
@@ -5,13 +9,14 @@
     padding: 10px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     align-items: center;
+    gap: 2rem;
   }
+
   
   .pokemon__pokedex-title {
     color: white;
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.3rem;
     margin-left: 20px;
   }
   
@@ -19,26 +24,4 @@
     text-decoration: none;
   }
   
-  .input-search {
-    padding-left: 20px;
-    border-radius: 0.2rem;
-    width: 11rem;
-    height: 30px;
-    border: none;
-    background-color: rgb(255, 212, 212);
-    margin-right: 20px;
-    position: relative;
-  }
-  
-  .input-search-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .search-icon {
-    opacity: 0.8;
-    width: 18px;
-    position: absolute;
-    margin-left: 60px;
-  }
+ 
