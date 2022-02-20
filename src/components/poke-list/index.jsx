@@ -34,7 +34,6 @@ function PokeList() {
     getPokemonsFromApi(urlApi)
       .then(d => {
         updateNextPokemons(d.next);
-        test = d.next;
         updatePrevPokemons(d.previous === null ? '' : d.previous);
         d.results.map((o) => {
           fetch(o.url)
