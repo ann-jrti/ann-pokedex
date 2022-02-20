@@ -31,8 +31,8 @@ function PokemonDetails() {
   
   const printPokemonDetail = (pokemon) => {
     return <PokemonDetail
-          img={pokemon.sprites.front_default}
-          imgReverse={pokemon.sprites.front_shiny}
+          img={pokemon.sprites.other.home.front_default}
+          imgReverse={pokemon.sprites.other.home.front_shiny}
           name={pokemon.name}
           height={pokemon.height}
           hp={pokemon.stats[0].base_stat}

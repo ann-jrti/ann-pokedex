@@ -32,7 +32,7 @@ function PokeList() {
   const printPokemonCard = filteredPokemons.map(pokemon => {
     return <PokeCard
       key={pokemon.id}
-      img={pokemon.sprites.other['official-artwork'].front_default}
+      img={pokemon.sprites.other.home.front_default}
       name={pokemon.name}
       types={pokemon.types[0].type.name}
       id={pokemon.id}
@@ -43,6 +43,7 @@ function PokeList() {
   return (
     <React.Fragment>
       <PokeHeader filterByPokemon={filter}></PokeHeader>
+      {/* <button>Next page</button> */}
       {pokemons.length === 0 ? <h2>Cargando...</h2> : printPokemonCard}
     </React.Fragment>
   );
