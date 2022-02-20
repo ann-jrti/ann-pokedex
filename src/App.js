@@ -1,4 +1,4 @@
-import './App.css';
+import './index.css'
 import { Router, BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/home';
 import NotFound from './pages/not-found';
@@ -17,6 +17,8 @@ function App() {
           <Route path="/home" element={<Home></Home>} ></Route>
           <Route path="*" element={<NotFound></NotFound>} ></Route>
           <Route path='/home/:id' element={<PokemonDetails></PokemonDetails>}></Route>
+          <Route path='/home/:page' element={<Home></Home>}></Route>
+          
         </Routes>
       </BrowserRouter>
   
