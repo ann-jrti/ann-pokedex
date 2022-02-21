@@ -1,3 +1,8 @@
+body {
+  width: 100%;
+}
+
+
 .pokemon__cards {
   display: flex;
   flex-direction: row;

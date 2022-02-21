@@ -1,11 +1,7 @@
-nav {
-  width: 100%;
-}
-
 .pokemon__header {
     background-color: rgb(212, 54, 54);
     height: 4rem;
-    width: 100%;
+    width: 100vh;
     padding: 10px;
     display: flex;
     flex-direction: row;

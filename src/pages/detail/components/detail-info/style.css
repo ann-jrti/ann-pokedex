@@ -75,8 +75,7 @@ body {
 .pokemon__detail__image {
     position: relative;
     width: 150px;
-    padding-bottom: 1rem;
-    margin-top: 2rem;
+  
 }
 
 /* bounce pokemon image effect */
@@ -112,7 +111,7 @@ body {
     background-color: rgb(253, 224, 93);
     font-weight: 600;
     border: 1px solid rgb(238, 199, 28);
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .pokemon__version:hover {
