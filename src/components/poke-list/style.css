@@ -1,63 +1,60 @@
-
 .pokemon__home-container {
-    display: flex;
-    justify-content: column;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  justify-content: column;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .next-page-button-container {
-    min-width: 100%;
-    display: flex;
-    justify-content: center;
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .next-page-button {
-    font-size: .8rem;
-    font-weight: 700;
-    border-radius: .2rem;
-    color: rgb(58, 58, 58);
-    padding: .3rem;
-    background-color: white;
-    border: 1px solid rgb(212, 54, 54);
-    transition: background-color 0.2s;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border-radius: 0.2rem;
+  color: rgb(58, 58, 58);
+  padding: 0.3rem;
+  background-color: white;
+  border: 1px solid rgb(212, 54, 54);
+  transition: background-color 0.2s;
 }
 
 .next-page-button:hover {
-    cursor: pointer;
-    border: none;
-    border: 1px solid rgb(212, 54, 54);
-    background-color: rgb(212, 54, 54);
-    color: white;
-    padding: .3rem;
+  cursor: pointer;
+  border: none;
+  border: 1px solid rgb(212, 54, 54);
+  background-color: rgb(212, 54, 54);
+  color: white;
+  padding: 0.3rem;
 }
 
 /* input */
 
 .input-search-container {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end; 
-    width: 100%;
-    margin: 2rem 5rem;
-  }
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+  margin: 2rem 5rem;
+}
 
 .input-search {
-    padding-left: 20px;
-    border-radius: 0.2rem;
-    width: 11rem;
-    height: 30px;
-    border: none;
-    background-color: white;
-    position: absolute;
-    border: 1px solid rgb(212, 54, 54);
-  }
-  
- 
-  
-  .search-icon {
-    opacity: 0.8;
-    width: 18px;
-    margin-right: .7rem;
-    margin-bottom: .4rem;
-  }
+  padding-left: 20px;
+  border-radius: 0.2rem;
+  width: 11rem;
+  height: 30px;
+  border: none;
+  background-color: white;
+  position: absolute;
+  border: 1px solid rgb(212, 54, 54);
+}
+
+.search-icon {
+  opacity: 0.8;
+  width: 18px;
+  margin-right: 0.7rem;
+  margin-bottom: 0.4rem;
+}

@@ -48,6 +48,7 @@ function PokeList() {
           .then((res) => res.json())
           .then((p) => {
             pokemons.push(p);
+            pokemons.sort((a, b) => a.id - b.id)
             updatePokemons([...pokemons]);
             udpateFilteredPokemons([...pokemons]);
           });
@@ -55,7 +56,6 @@ function PokeList() {
     });
     return () => updateUrlApi();
   }, [urlApi]);
-
   const printPokemonCard = filteredPokemons.map((pokemon) => {
     return (
       <PokeCard
@@ -71,38 +71,36 @@ function PokeList() {
 
   return (
     <React.Fragment>
-      <main className="pokemon__home-container">
-        <div className="input-search-container">
-          <input
-            className="input-search"
-            onChange={filterByPokemon}
-            type="text"
-            placeholder="Search pokemon"
-          ></input>
-          <img src={searchIcon} className="search-icon"></img>
-        </div>
-        <div className="next-page-button-container">
-          {prevPokemons !== "" ? (
-            <button
-              onClick={handleOnClickPrevPage}
-              className="next-page-button"
-            >
-              Previous page
-            </button>
-          ) : (
-            ""
-          )}
-          <Link to={`/home/pokemon/page/${pathParams.page}`}>
-            <button
-              onClick={handleOnClickNextPage}
-              className="next-page-button"
-            >
-              Next page
-            </button>
-          </Link>
-        </div>
-        {pokemons.length === 0 ? <h2>Cargando...</h2> : printPokemonCard}
-      </main>
+      <div className="input-search-container">
+        <input
+          className="input-search"
+          onChange={filterByPokemon}
+          type="text"
+          placeholder="Search pokemon"
+        ></input>
+        <img src={searchIcon} className="search-icon"></img>
+      </div>
+      <div className="next-page-button-container">
+        {prevPokemons !== "" ? (
+          <button
+            onClick={handleOnClickPrevPage}
+            className="next-page-button"
+          >
+            Previous page
+          </button>
+        ) : (
+          ""
+        )}
+        <Link to={`/home/pokemon/page/${pathParams.page}`}>
+          <button
+            onClick={handleOnClickNextPage}
+            className="next-page-button"
+          >
+            Next page
+          </button>
+        </Link>
+      </div>
+      {pokemons.length === 0 ? <h2>Cargando...</h2> : printPokemonCard}
     </React.Fragment>
   );
 }

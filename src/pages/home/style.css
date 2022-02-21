@@ -1,10 +1,18 @@
-body {
-  width: 100%;
-}
-
+/* body {
+  width: 100vh;
+} */
+/* 
+.pokemon__cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100vh;
+} */
 
 .pokemon__cards {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
+  width: 100vh;
 }

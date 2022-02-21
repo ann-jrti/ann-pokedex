@@ -3,11 +3,4 @@
 .App {
   display: flex;
   flex-direction: column;
-}
-
-.pokemon__cards {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
 } */
