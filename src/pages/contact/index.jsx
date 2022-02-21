@@ -14,7 +14,7 @@ function Contact() {
     })
       .then(response => response.json())
       .then(info => {
-        updateResponse('Thank you for your register!')
+        updateResponse('Thank you for your registration!')
         setTimeout(() => {
           backHome('/home')
         }, 3000)
@@ -36,9 +36,7 @@ function Contact() {
           <input className="form__input" name="email" type="email" placeholder="Your Email" required></input>
         </div>
 
-
-        {/* <textarea placeholder="Your Message" name="message" rows="5" required></textarea> */}
-
+        <textarea placeholder="Your Message" name="message" rows="5" required></textarea>
         <button className="submit" type="submit">Submit</button>
         <h2>{response}</h2>
       </form>
