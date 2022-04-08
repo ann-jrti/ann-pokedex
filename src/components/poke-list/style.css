@@ -37,7 +37,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  width: 100%;
+  width: 100vw;
   margin: 2rem 5rem;
 }
 

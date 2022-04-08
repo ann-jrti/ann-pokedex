@@ -2,13 +2,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 100vw;
 }
 
-/* .pokemon__detail-container {
-    width: 100%;
-   
-} */
+.pokemon__detail-container {
+  display: flex;
+}
 
 .pokemon__details-text {
   font-size: 1.5rem;
@@ -53,6 +52,7 @@ body {
   align-items: center;
   position: absolute;
   margin-bottom: 20rem;
+  z-index: 0;
 }
 
 .pokemon__pokeball-background {
@@ -196,4 +196,17 @@ span {
 .arrow {
   font-size: 1.5rem;
   padding-bottom: 0.3rem;
+}
+
+.pokemon__back-home-container {
+  display: flex;
+}
+
+.two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5rem;
+  margin-left: -10rem;
+  z-index: 1;
 }
