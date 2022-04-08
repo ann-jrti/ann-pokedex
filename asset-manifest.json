@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/ann-pokedex/static/css/main.8e6a7585.css",
+    "main.js": "/ann-pokedex/static/js/main.1c977061.js",
+    "static/js/787.6414e994.chunk.js": "/ann-pokedex/static/js/787.6414e994.chunk.js",
+    "static/media/pikachu-not-found.gif": "/ann-pokedex/static/media/pikachu-not-found.0a2ce6c955c9dba3cac7.gif",
+    "index.html": "/ann-pokedex/index.html",
+    "main.8e6a7585.css.map": "/ann-pokedex/static/css/main.8e6a7585.css.map",
+    "main.1c977061.js.map": "/ann-pokedex/static/js/main.1c977061.js.map",
+    "787.6414e994.chunk.js.map": "/ann-pokedex/static/js/787.6414e994.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8e6a7585.css",
+    "static/js/main.1c977061.js"
+  ]
+}
